@@ -25,6 +25,14 @@ def test_should_compute_nominal_weighted_avg():
     assert avg == 10
 
 
+def test_should_compute_complex_weighted_avg():
+    avg = compute_weighted_avg(
+        [10, 5, 12, 7, 9, 1, 3, 5, 14, 18],
+        [1, 1, 3, 1, 6, 1, 1, 3, 1, 6])
+
+    assert round(avg*100)/100 == 10.54
+
+
 def test_should_compute_nominal_weighted_avg():
     with pytest.raises(TypeError):
         assert compute_weighted_avg(
