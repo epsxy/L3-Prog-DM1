@@ -23,7 +23,10 @@ def sum_for_computing_pi(n: int) -> float:
 def compute_error_for_current_idx(error_idx: int) -> float:
     if error_idx < 2:
         raise Exception("sum not defined for idx < 1")
-    return abs(sum_for_computing_pi(error_idx) - sum_for_computing_pi(error_idx - 1))
+    return abs(
+        sum_for_computing_pi(error_idx) -
+        sum_for_computing_pi(error_idx - 1)
+    )
 
 
 def get_pi_from_sum(sum_for_pi: float) -> float:
