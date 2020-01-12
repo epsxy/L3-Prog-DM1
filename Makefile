@@ -1,5 +1,8 @@
 .PHONY: test ex1 ex2 ex3 ex4
 
+clean:
+	rm -rf **/__pycache__
+
 test:
 	py.test ex1/test.py ex2/test.py ex3/test.py ex4/test.py
 
